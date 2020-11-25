@@ -6,3 +6,11 @@ parameters:
 
     ignoreErrors:
         - '#.*OpenSSLAsymmetricKey.*#'
+        -
+            message:
+                """
+                    #^Instantiation of deprecated class Lcobucci\\\\JWT\\\\Validation\\\\Constraint\\\\ValidAt\\:
+                    Use \\\\Lcobucci\\\\JWT\\\\Validation\\\\Constraint\\\\LooseValidAt$#
+                """
+            count: 1
+            path: test/unit/Validation/Constraint/ValidAtTest.php
